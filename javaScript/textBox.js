@@ -11,9 +11,16 @@ function typeAheadCtrl($scope) {
     ];
 
     $scope.onchange = function () {
-        var index = $scope.diets.indexOf($scope.selected[0]);
-        $scope.selectedDiet.push($scope.selected[0]);
-        $scope.diets.splice(index, 1);
+
+        var selectedIndex = [];
+        selectedIndex = $scope.selected;
+
+        for (var counter = 0; counter < selectedIndex.length; ++counter) {
+            var index = $scope.diets.indexOf(selectedIndex[counter]);
+            $scope.selectedDiet.push(selectedIndex[counter]);
+            $scope.diets.splice(index, 1)
+
+        }
     }
 
     $scope.removeDiet = function (diet) {
