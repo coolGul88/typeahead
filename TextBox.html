@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" ng-app xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.1.1-dist/fonts/glyphicons-halflings-regular.ttf">
+    <link rel="stylesheet" href="css/textBox.css">
+    <script src="javaScript/textBox.js"></script>
+    <script src="lib/angular.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <br>
+    <br>
+
+    <div ng-controller="typeAheadCtrl">
+        <span class="prettySpan" ng-repeat="diet in selectedDiet">
+                <div class="prettyText">{{diet.name}}</div>
+                <div class="cross" ng-click="removeDiet(diet)"></div>
+        </span>
+        <select class="dropdown-toggle" multiple="multiple" ng-model="selected" ng-click="onchange()"
+                ng-options="diet.name for diet in diets">
+        </select>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.prettySpan {
+    background-color: #f5f5f5;
+    cursor: default;
+    display: block;
+    height: 20px;
+    white-space: nowrap;
+    border-radius: 3px;
+    font-size: 13px;
+    color: #222;
+    font-family: arial, sans-serif;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border: 1px solid gray;
+    float: left;
+}
+
+.prettyText {
+    display: inline-block;
+    color: #222;
+    margin: 2px 5px;
+    max-width: 325px;
+    max-height: 17px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
+    cursor: move;
+}
+
+.cross {
+    display: inline-block;
+    width: 14px;
+    height: 20px;
+    background: no-repeat url('image/cross.png') -4px 0;
+    opacity: .6;
+    vertical-align: top;
+    cursor: pointer;
+    background-size: 20px 20px;
+}
+
+.valueText {
+    color: #808080;
+}
